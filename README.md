@@ -19,6 +19,8 @@ It includes hundreds of popular data science packages, the conda package and vir
 - Step 2: Install Anaconda 5.0.1 with the default settings (unless you know what you are doing.)
 - Step 3: Open Anaconda Navigator, you will see similar GUI as below, which means you have successfully installed Anaconda, congratulations! 
 
+## Install TensorFlow
+Follow the official documentation to install the TensorFlow package: https://www.tensorflow.org/install/
 
 
 ## Basic Anaconda 
