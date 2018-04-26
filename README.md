@@ -52,43 +52,43 @@ There are two ways to set up the environment of Python 3.5, one is in the Conda 
 
 #### Conda Command Window
 In the Conda Command Window, create a new environment named “py35”, install Python 3.5, by invoking the following command::
-```python
+```
 conda create --name py35 python=3.5
 ```
 The anaconda will suggest that several packages will by installed, type “y” and wait the installation done.
 Activate the conda environment by issuing the following command:
-```python
+```
 activate py35 
 ```
 **LINUX, macOS: source activate py35**
 Then, you can check your python version by type:
-```python
+```
 python --version 
 ```
 You will get the results like: Python 3.5.4: Anaconda, Inc. This means that this environment is Python 3.5.
 
 #### Installing and updating packages
 Now, we fist need to list all packages and versions installed in active environment, enter the following command:
-```python
+```
 conda list
 ```
 Assume we want to install a new package in the active environment (py35), enter the command:
-```python
+```
 conda install numpy
 ```
 and then enter “y” to proceed.
 
 Check the package Numpy is properly installed by running “conda list” again.Or you can try the following code to use the Numpy package.
-
-```python 
+```python
 import numpy as np
+print(np.version.version)
 ```
 Update a package in the current environment, for example
-```python
+```
 conda update numpy
 ```
 Deactivate the current environment:
-```python
+```
 deactivate
 ``` 
 **LINUX, macOS: source deactivate**.
