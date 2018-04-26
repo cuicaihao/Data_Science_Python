@@ -31,15 +31,15 @@ There are two ways to start the Conda Command Line Window:
 ### Conda Basics
 In the Conda Command Window, type the following commands to get familiar with the Anaconda.
 Verify conda is installed, check version number:
-```python
+```
 conda info
 ```
 Update conda to the current version:
-```python
+```
 conda update conda
 ```
 Command line help:
-```python
+```
 conda install --help
 ```
 
