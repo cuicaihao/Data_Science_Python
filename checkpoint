@@ -1,2 +1,2 @@
-model_checkpoint_path: "my_mnist_model"
-all_model_checkpoint_paths: "my_mnist_model"
+model_checkpoint_path: "my_model_variational.ckpt"
+all_model_checkpoint_paths: "my_model_variational.ckpt"
