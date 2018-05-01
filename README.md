@@ -24,6 +24,12 @@ It includes hundreds of popular data science packages, the conda package and vir
 ## Install TensorFlow
 Follow the official documentation to install the TensorFlow package: https://www.tensorflow.org/install/
 
+After installation, type the following commands: 
+```python
+import tensorflow as tf
+print(tf.__version__) # this should be tensorflow 1.8.0
+```
+
 
 ## Basic Anaconda 
 
