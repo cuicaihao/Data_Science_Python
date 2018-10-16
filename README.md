@@ -104,7 +104,8 @@ deactivate
 **LINUX, macOS: source deactivate**.
 
 
-
+License
+This **Data_Science_Python** is distributed under the MIT license (see MIT LICENCE.txt).
 
 
 
