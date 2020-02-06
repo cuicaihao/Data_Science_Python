@@ -1,6 +1,6 @@
 # Data_Science_Python
 
-![Logo](https://github.com/cuicaihao/Data_Science_Python/blob/master/images/%20Logo.png)
+![Logo](./images/Logo.png )
 
 Python is a great general-purpose programming language on its own, but with the help of a few popular libraries (numpy, scipy, matplotlib, tensorflow) it becomes a powerful environment for scientific computing and data analysis.
 
