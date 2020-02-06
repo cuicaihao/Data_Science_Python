@@ -30,6 +30,14 @@ import tensorflow as tf
 print(tf.__version__) # this should be tensorflow 1.8.0
 ```
 
+## Install PyTorch
+Follow the official documentation to install the TensorFlow package:  https://pytorch.org/get-started/locally/
+After installation, type the following commands: 
+```python
+import torch
+print(torch.__version__) # this should be tensorflow 1.8.0
+```
+ 
 
 ## Basic Anaconda 
 
