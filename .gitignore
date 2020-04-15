@@ -12,6 +12,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+*.icloud
+
+
 # C extensions
 *.so
 
