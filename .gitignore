@@ -5,13 +5,13 @@ tmp/
 html/
 logs/
 tf_logs/
+.DS_Store
 
 # original git
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
 *.icloud
 
 
