@@ -7,6 +7,13 @@ logs/
 tf_logs/
 .DS_Store
 
+# special files
+*.h5
+*.csv
+*.pdf
+models/**
+
+
 05.Text_NLP/training_checkpoints/
 
 # original git
