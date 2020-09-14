@@ -1,3 +1,14 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+'''
+Created on   :2020/09/11 15:57:30
+@author      :Caihao (Chris) Cui
+@file        :clustering.py
+@content     :
+@version     :0.0
+'''
+
+
 '''
 This script perfoms the basic process for applying a machine learning
 algorithm to a dataset using Python libraries.
@@ -30,18 +41,18 @@ reduction models to find similar values, outliers, and visualize the
 classes.
 '''
 
-# Remember to update the script for the new data when you change this URL 
+# Remember to update the script for the new data when you change this URL
+from matplotlib.ticker import MaxNLocator
+import matplotlib.pyplot as plt
+import numpy as np
+from pandas import read_table
 URL = "https://archive.ics.uci.edu/ml/machine-learning-databases/water-treatment/water-treatment.data"
 
 # Uncomment this call when using matplotlib to generate images
 # rather than displaying interactive UI.
 #import matplotlib
-#matplotlib.use('Agg')
+# matplotlib.use('Agg')
 
-from pandas import read_table
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.ticker import MaxNLocator
 
 try:
     # [OPTIONAL] Seaborn makes plots nicer
@@ -50,6 +61,7 @@ except ImportError:
     pass
 
 # =====================================================================
+
 
 def download_data():
     '''
@@ -66,24 +78,24 @@ def download_data():
     #from azure.storage.blob import BlockBlobService
     #service = BlockBlobService(ACCOUNT_NAME, ACCOUNT_KEY)
     #service.get_blob_to_path(container_name, blob_name, 'my_data.csv')
-    #frame = read_table('my_data.csv', ...
+    # frame = read_table('my_data.csv', ...
 
     frame = read_table(
         URL,
-        
+
         # Uncomment if the file needs to be decompressed
-        #compression='gzip',
-        #compression='bz2',
+        # compression='gzip',
+        # compression='bz2',
 
         # Specify the file encoding
         # Latin-1 is common for data from US sources
         encoding='latin-1',
-        #encoding='utf-8',  # UTF-8 is also common
+        # encoding='utf-8',  # UTF-8 is also common
 
         # Specify the separator in the data
         sep=',',            # comma separated values
-        #sep='\t',          # tab separated values
-        #sep=' ',           # space separated values
+        # sep='\t',          # tab separated values
+        # sep=' ',           # space separated values
 
         # Ignore spaces after the separator
         skipinitialspace=True,
@@ -93,23 +105,23 @@ def download_data():
 
         # Generate row labels from each row number
         index_col=None,
-        #index_col=0,       # use the first column as row labels
-        #index_col=-1,      # use the last column as row labels
+        # index_col=0,       # use the first column as row labels
+        # index_col=-1,      # use the last column as row labels
 
         # Generate column headers row from each column number
         header=None,
-        #header=0,          # use the first line as headers
+        # header=0,          # use the first line as headers
 
         # Use manual headers and skip the first row in the file
-        #header=0,
+        # header=0,
         #names=['col1', 'col2', ...],
     )
 
     # Return a subset of the columns
-    #return frame[['col1', 'col4', ...]]
+    # return frame[['col1', 'col4', ...]]
 
     # Return the entire frame
-    #return frame
+    # return frame
 
     # Return all except the first column
     del frame[frame.columns[0]]
@@ -140,7 +152,7 @@ def get_features(frame):
 
     imputer = SimpleImputer(strategy='mean')
     arr = imputer.fit_transform(arr)
-    
+
     # Normalize the entire data set to mean=0.0 and variance=1.0
     from sklearn.preprocessing import scale
     arr = scale(arr)
@@ -231,7 +243,7 @@ def plot(Xs, predictions):
 
     `Xs` is a list of tuples containing:
         (title, x coord, y coord)
-    
+
     `predictions` is a list of tuples containing
         (title, predicted classes)
 
@@ -247,7 +259,7 @@ def plot(Xs, predictions):
     fig.canvas.set_window_title('Clustering data from ' + URL)
 
     # Show each element in the plots returned from plt.subplots()
-    
+
     for row, (row_label, X_x, X_y) in enumerate(Xs):
         for col, (col_label, y_pred) in enumerate(predictions):
             ax = plt.subplot(nrows, ncols, row * ncols + col + 1)
@@ -258,8 +270,9 @@ def plot(Xs, predictions):
 
             # Plot the decomposed input data and use the predicted
             # cluster index as the value in a color map.
-            plt.scatter(X_x, X_y, c=y_pred.astype(np.float), cmap='prism', alpha=0.5)
-            
+            plt.scatter(X_x, X_y, c=y_pred.astype(
+                np.float), cmap='prism', alpha=0.5)
+
             # Set the axis tick formatter to reduce the number of ticks
             ax.xaxis.set_major_locator(MaxNLocator(nbins=4))
             ax.yaxis.set_major_locator(MaxNLocator(nbins=4))
@@ -272,7 +285,7 @@ def plot(Xs, predictions):
     plt.show()
 
     # To save the plot to an image file, use savefig()
-    #plt.savefig('plot.png')
+    # plt.savefig('plot.png')
 
     # Open the image file with the default image viewer
     #import subprocess
@@ -301,7 +314,8 @@ if __name__ == '__main__':
 
     # Process data into a feature array
     # This is unsupervised learning, and so there are no labels
-    print("Processing {} samples with {} attributes".format(len(frame.index), len(frame.columns)))
+    print("Processing {} samples with {} attributes".format(
+        len(frame.index), len(frame.columns)))
     X = get_features(frame)
 
     # Run multiple dimensionality reduction algorithms on the data

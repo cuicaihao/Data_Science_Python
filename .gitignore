@@ -6,6 +6,7 @@ html/
 logs/
 tf_logs/
 .DS_Store
+.idea 
 
 # special files
 *.h5
