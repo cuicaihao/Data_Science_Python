@@ -16,6 +16,13 @@ models/**
 
 
 05.Text_NLP/training_checkpoints/
+06.MachineLearning/catboost_info/
+06.MachineLearning/model_depth_1
+06.MachineLearning/model_depth_5
+
+
+
+
 
 # original git
 # Byte-compiled / optimized / DLL files
