@@ -72,3 +72,7 @@ ax.scatter(x_res, y_res, z_res, marker='.', c='#00CED1')
 plt.show()
 
 # %%
+print("This is the end line of this code")
+
+
+
