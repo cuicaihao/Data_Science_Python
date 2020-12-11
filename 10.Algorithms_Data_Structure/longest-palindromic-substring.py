@@ -11,7 +11,6 @@ Created on   :2020/11/28 02:18:34
 
 # here put the import lib
 
-
 # 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
 
 # 示例 1：
@@ -25,11 +24,15 @@ Created on   :2020/11/28 02:18:34
 # 	输入: "cbbd"
 # 	输出: "bb"
 
+
 def find_string(s):
     """
     给定一个字符串 s，找到 s 中最长的回文子串
-    >>>find_string("babad")
-    bab
+
+    >>> find_string("babad")
+    'bab'
+    >>> find_string("abcdcba12")
+    'abcdcba'
     """
     n = len(s)
     matrix = [[0 for i in range(n)] for i in range(n)]
@@ -52,16 +55,22 @@ def find_string(s):
                     if current_longest < j - i + 1:
                         res = s[i:j+1]
                         current_longest = j - i + 1
-    return res, matrix
+    return res
 
 
-s = "babad"
-res, matrx1 = find_string(s)
-print("{} 最长的回文子串:{}".format(s, res))
-# print("{}  ".format(matrx1))
+# s = "babad"
+# res = find_string(s)
+# print("{} 最长的回文子串:{}".format(s, res))
+# # print("{}  ".format(matrx1))
 
 
-s = "abcdcba12"
-res, matrx2 = find_string(s)
-print("{} 最长的回文子串:{}".format(s, res))
-# print("{}  ".format(matrx2))
+# s = "abcdcba12"
+# res = find_string(s)
+# print("{} 最长的回文子串:{}".format(s, res))
+# # print("{}  ".format(matrx2))
+
+# TODO python -m doctest longest-palindromic-substring.py -n
+if __name__ == "__main__":
+    print("Start printing ...")
+    import doctest
+    doctest.testmod()
