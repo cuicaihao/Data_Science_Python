@@ -8,6 +8,9 @@ tf_logs/
 .DS_Store
 .idea 
 
+.index
+
+
 # special files
 *.h5
 *.csv
