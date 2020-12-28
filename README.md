@@ -1,6 +1,6 @@
 # Data_Science_Python
 
-Lastest Update: July 2020
+Lastest Update: Dec 2020
 
 Started: 25-April-2018
 
@@ -12,94 +12,84 @@ I started the notebook repo as a beginner tutorial in 2018, then I updated it wi
 
 This repo is designed with the following structure:
 
-    .
     ├── 00.Unsorted
-    │   ├── 01_Python_Datashader_NYC\ taxi\ trips.ipynb
-    │   ├── Tensor2Tensor_Intro.ipynb
-    │   ├── deploy_seq2seq_hybrid_frontend_tutorial\ (1).py
-    │   ├── finetuning_torchvision_models_tutorial.ipynb
-    │   ├── neural_style_tutorial.py
-    │   └── scikit_plot_gpr_noisy_targets.ipynb
     ├── 01.Python
-    │   ├── Learn_Python_3_in_15mins.py
-    │   ├── Python_01_Basic.ipynb
-    │   ├── Python_02_Numpy.ipynb
-    │   ├── Python_03_Read_and_Write_Files.ipynb
-    │   ├── Python_04_Matplotlib_Data_Visualization\ .ipynb
-    │   └── Python_05_Pandas.ipynb
+    │ ├── Learn_Python_3_in_15mins.py
+    │ ├── Python_01_Basic.ipynb
+    │ ├── Python_02_Numpy.ipynb
+    │ ├── Python_03_Read_and_Write_Files.ipynb
+    │ ├── Python_04_Matplotlib_Data_Visualization\ .ipynb
+    │ └── Python_05_Pandas.ipynb
     ├── 02.TensorFlow
-    │   ├── TensorFlow_01_Graph_and_Session.ipynb
-    │   ├── TensorFlow_02_Linear_Regression_with_TF.ipynb
-    │   ├── TensorFlow_03_Saving\ and\ Restoring\ Models.ipynb
-    │   ├── TensorFlow_04_Visualizing\ the\ Graph\ and\ Training\ Curves\ Using\ TensorBoard.ipynb
-    │   ├── TensorFlow_05_Neural_Networks.ipynb
-    │   ├── TensorFlow_06_Training_Deep_Nets.ipynb
-    │   ├── TensorFlow_07_Transfer_Learning_(Reusing\ Pretrained\ Layers\ or\ Models).ipynb
-    │   ├── TensorFlow_08_Faster_Optimizers_for_Building_Deep_Nets.ipynb
-    │   ├── TensorFlow_09_Avoiding_Overfitting_by_Regularizations.ipynb
-    │   ├── TensorFlow_10_Distributed_TF_Computation\ (Draft).ipynb
-    │   ├── TensorFlow_11_Convolutional_Neural_Networks_(Deep\ ConvNets).ipynb
-    │   ├── TensorFlow_12_Autoencoders.ipynb
-    │   ├── Tensorflow_EX_01_Convolutional_Variational_Autoencoder.ipynb
-    │   ├── cvae.gif
-    │   └── image
-    ├── 03.Keras
-    │   ├── TensorFlow_Keras_01\ Keras\ API.ipynb
-    │   ├── TensorFlow_Keras_02\ Basic\ classification.ipynb
-    │   ├── TensorFlow_Keras_03\ Predict\ house\ prices\ regression.ipynb
-    │   ├── TensorFlow_Keras_04\ Save\ and\ restore\ models.ipynb
-    │   └── TensorFlow_Keras_05\ Text\ classification\ with\ movie\ reviews.ipynb
-    ├── 04.PyTorch
-    │   ├── PyTorch_01_Basics.ipynb
-    │   ├── PyTorch_02_autograd_tutorial.ipynb
-    │   ├── PyTorch_03_neural_networks_tutorial.ipynb
-    │   ├── PyTorch_04_cifar10_tutorial.ipynb
-    │   ├── PyTorch_05_data_loading_tutorial.ipynb
-    │   ├── PyTorch_06_saving_loading_models.ipynb
-    │   ├── PyTorch_07_transfer_learning_tutorial.ipynb
-    │   ├── PyTorch_08_neural_style_tutorial.ipynb
-    │   └── PyTorch_09_deploy_seq2seq_hybrid_frontend_tutorial.ipynb
-    ├── 05.NLTK
-    │   └── 00.language_processing_and_python.ipynb
-    ├── 05.Text_NLP
-    │   ├── 00.intro_tensorflow_text.ipynb
-    │   ├── 00.text_tensorflow_datasets.ipynb
-    │   ├── 01.word_embeddings.ipynb
-    │   ├── 01_Trained_Word_Embeddings_with_Gensim.ipynb
-    │   ├── 02_Embedding_Songs_to_Make_Recommendations.ipynb
-    │   ├── 03_Sentence_Classification_with_BERT.ipynb
-    │   ├── 04.Neural\ machine\ translation\ with\ attention.ipynb
-    │   ├── Transformers_huggingface.ipynb
-    │   ├── image_captioning.ipynb
-    │   ├── jieba_text.ipynb
-    │   ├── meta.tsv
-    │   ├── text_classification_rnn.ipynb
-    │   ├── text_generation.ipynb
-    │   ├── transformer.ipynb
-    │   └── vecs.tsv
-    ├── 07.Data_visualization
-    │   ├── 01_Python_Bokeh.ipynb
-    │   ├── Folium_Map_Melbourne_Index.html
-    │   ├── Python\ Folium\ Map\ Demo.ipynb
-    │   ├── example.py
-    │   ├── lines.html
-    │   └── python_progressbar.ipynb
+    │ ├── Keras
+    │ ├── TF1.x
+    │ └── TF2.x
+    ├── 03.PyTorch
+    │ ├── PyTorch_01_Basics.ipynb
+    │ ├── PyTorch_02_autograd_tutorial.ipynb
+    │ ├── PyTorch_03_neural_networks_tutorial.ipynb
+    │ ├── PyTorch_04_cifar10_tutorial.ipynb
+    │ ├── PyTorch_05_data_loading_tutorial.ipynb
+    │ ├── PyTorch_06_saving_loading_models.ipynb
+    │ ├── PyTorch_07_transfer_learning_tutorial.ipynb
+    │ ├── PyTorch_08_neural_style_tutorial.ipynb
+    │ ├── PyTorch_09_deploy_seq2seq_hybrid_frontend_tutorial.ipynb
+    │ └── nn_tutorial.ipynb
+    ├── 04.ComputerVision
+    ├── 05.NLP_TextMining
+    │ ├── 00.intro_tensorflow_text.ipynb
+    │ ├── 00.text_tensorflow_datasets.ipynb
+    │ ├── 01.word_embeddings.ipynb
+    │ ├── 01_Trained_Word_Embeddings_with_Gensim.ipynb
+    │ ├── 02_Embedding_Songs_to_Make_Recommendations.ipynb
+    │ ├── 03_Sentence_Classification_with_BERT.ipynb
+    │ ├── 04.Neural\ machine\ translation\ with\ attention.ipynb
+    │ ├── NLTK
+    │ ├── Transformers_huggingface.ipynb
+    │ ├── image_captioning.ipynb
+    │ ├── jieba_text.ipynb
+    │ ├── meta.tsv
+    │ ├── text_classification_rnn.ipynb
+    │ ├── text_generation.ipynb
+    │ ├── transformer.ipynb
+    │ └── vecs.tsv
+    ├── 06.MachineLearning
+    │ ├── Create\ your\ own\ Deep\ Learning\ framework\ using\ Numpy.ipynb
+    │ ├── catboost_tutorial.ipynb
+    │ ├── classifier.py
+    │ ├── clustering.py
+    │ ├── model.json
+    │ ├── multiclass_model.json
+    │ ├── plot_cluster_comparison.ipynb
+    │ ├── plot_release_highlights_0_23_0.ipynb
+    │ ├── regression.py
+    │ └── regression.svg
+    ├── 07.Data_Visualization
+    │ ├── 01_Python_Bokeh.ipynb
+    │ ├── Folium_Map_Melbourne_Index.html
+    │ ├── Python\ Folium\ Map\ Demo.ipynb
+    │ ├── example.py
+    │ ├── lines.html
+    │ └── python_progressbar.ipynb
     ├── 08.PySpark
-    │   └── Demo.py
+    │ └── Demo.py
+    ├── 09.WebService
+    │ └── Tornado
     ├── 10.Algorithms_Data_Structure
-    │   ├── Data\ Structures.ipynb
-    │   ├── Dynamic\ Programming.ipynb
-    │   ├── Graph\ Algorithm.ipynb
-    │   ├── Prime\ Numbers\ and\ Prime\ Factorization.ipynb
-    │   ├── ReadMe.md
-    │   ├── Searching_n_Sorting
-    │   └── playground.py
+    │ ├── Data\ Structures.ipynb
+    │ ├── Dynamic\ Programming.ipynb
+    │ ├── Graph\ Algorithm.ipynb
+    │ ├── Prime\ Numbers\ and\ Prime\ Factorization.ipynb
+    │ ├── Probability.ipynb
+    │ ├── ReadMe.md
+    │ ├── Searching_n_Sorting
+    │ ├── **pycache**
+    │ ├── longest-palindromic-substring.py
+    │ └── playground.py
     ├── MIT\ License.txt
     ├── README.md
     ├── data
-    ├── images
-    ├── logs
-    └── models
+    └── images
 
 ## Introduction to Python
 
@@ -114,13 +104,13 @@ There are currently two different supported versions of Python, 2.7.x version, a
 The reason why we use Anaconda instead of the original Python is because that the open source Anaconda Distribution is the easiest way to do Python data science and machine learning.
 It includes hundreds of popular data science packages, the conda package and virtual environment manager for Windows, Linux and MacOS. Conda makes it quick and easy to install, run and upgrade complex data science and machine learning environments like scikit-learn, TensorFlow and SciPy. Anaconda Distribution is the foundation of millions of data science projects as well as Amazon Web Services' Machine Learning AMIs and Anaconda for Microsoft on Azure and Windows.
 
-- Step 1: Download Anaconda Distribution (Anaconda 5.0.1) Python 3.6 64-Bit version (Windows, MacOS or Linux): https://www.anaconda.com/download/.
-- Step 2: Install Anaconda 5.0.1 with the default settings (unless you know what you are doing.)
+- Step 1: Download Anaconda Distribution (Anaconda) Python 3.6 (7.x, 8.x) 64-Bit version (Windows, MacOS or Linux): https://www.anaconda.com/download/.
+- Step 2: Install Anaconda with the default settings (unless you know what you are doing.)
 - Step 3: Open Anaconda Navigator, you will see similar GUI as below, which means you have successfully installed Anaconda, congratulations!
 
 ## Install TensorFlow
 
-Follow the official documentation to install the TensorFlow package: https://www.tensorflow.org/install/
+Follow the official documentation to install the TensorFlow package: https://www.tensorflow.org/install/ (TF 2.x)
 
 After installation, type the following commands:
 
@@ -180,7 +170,7 @@ There are two ways to set up the environment of Python 3.5, one is in the Conda 
 In the Conda Command Window, create a new environment named “py35”, install Python 3.6, by invoking the following command::
 
 ```
-conda create --name py35 python=3.6
+conda create --name py36 python=3.6
 ```
 
 The anaconda will suggest that several packages will by installed, type “y” and wait the installation done.
