@@ -1,30 +1,3 @@
-# Update by User
-.vscode
-tmp/ 
-.ipynb_checkpoints
-html/
-logs/
-tf_logs/
-.DS_Store
-.idea 
-
-.index
-
-
-# special files
-*.h5
-*.csv
-*.pdf
-models/**
-
-
-05.Text_NLP/training_checkpoints/
-06.MachineLearning/catboost_info/
-06.MachineLearning/model_depth_1
-06.MachineLearning/model_depth_5
-
-
-
 
 
 # original git
@@ -159,3 +132,36 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Update by User
+.vscode
+tmp/ 
+.ipynb_checkpoints
+html/
+logs/
+tf_logs/
+.DS_Store
+.idea 
+.index
+
+# special files
+*.h5
+*.csv
+*.pdf
+models/**
+
+05.Text_NLP/training_checkpoints/
+06.MachineLearning/catboost_info/
+06.MachineLearning/model_depth_1
+06.MachineLearning/model_depth_5
+
+# extra folders TF2.x
+02.TensorFlow/TF2.x/.ipynb_checkpoints
+02.TensorFlow/TF2.x/ckpt
+02.TensorFlow/TF2.x/path 
+02.TensorFlow/TF2.x/saved_model
+02.TensorFlow/TF2.x/tb
+02.TensorFlow/TF2.x/checkpoint
+02.TensorFlow/TF2.x/weights.data-00000-of-00001
+02.TensorFlow/TF2.x/weights.index
