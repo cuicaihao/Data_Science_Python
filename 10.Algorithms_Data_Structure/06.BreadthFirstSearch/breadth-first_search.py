@@ -20,7 +20,7 @@ def search(name):
     search_queue = deque()
     search_queue += graph[name]
     # This array is how you keep track of which people you've searched before.
-    searched = []
+    searched = []  # remember searched people
     while search_queue:
         print(searched)
         print(search_queue)
