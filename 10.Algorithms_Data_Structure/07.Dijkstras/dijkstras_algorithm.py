@@ -28,10 +28,8 @@ parents["a"] = "start"
 parents["b"] = "start"
 parents["fin"] = None
 
-processed = []
 
-
-def find_lowest_cost_node(costs):
+def find_lowest_cost_node(costs, processed):
     lowest_cost = float("inf")
     lowest_cost_node = None
     # Go through each node.
@@ -45,26 +43,47 @@ def find_lowest_cost_node(costs):
     return lowest_cost_node
 
 
-# Find the lowest-cost node that you haven't processed yet.
-node = find_lowest_cost_node(costs)
-# If you've processed all the nodes, this while loop is done.
-while node is not None:
-    cost = costs[node]
-    # Go through all the neighbors of this node.
-    neighbors = graph[node]
-    for n in neighbors.keys():
-        new_cost = cost + neighbors[n]
-        # If it's cheaper to get to this neighbor by going through this node...
-        if costs[n] > new_cost:
-            # ... update the cost for this node.
-            costs[n] = new_cost
-            # This node becomes the new parent for this neighbor.
-            parents[n] = node
-    # Mark the node as processed.
-    processed.append(node)
-    # Find the next node to process, and loop.
-    node = find_lowest_cost_node(costs)
+def generate_shortest_path(parents):
+    node_path = ["fin"]
+    for i in range(len(parents)):
+        node_name = node_path[-1]
+        node_name = parents[node_name]
+        node_path.append(node_name)
+        if node_name == "start":
+            break
+    node_path.reverse()
+    print("The shortest node path from start to end is : ", node_path)
+    return node_path
 
-print("Cost from the start to each node:")
-print(costs)
-print(parents)
+
+def dijkstrasAlgorithm(graph, costs, parents):
+    processed = []
+    # Find the lowest-cost node that you haven't processed yet.
+    node = find_lowest_cost_node(costs, processed)
+    # If you've processed all the nodes, this while loop is done.
+    while node is not None:
+        cost = costs[node]
+        # Go through all the neighbors of this node.
+        neighbors = graph[node]
+        for n in neighbors.keys():
+            new_cost = cost + neighbors[n]
+            # If it's cheaper to get to this neighbor by going through this node...
+            if costs[n] > new_cost:
+                # ... update the cost for this node.
+                costs[n] = new_cost
+                # This node becomes the new parent for this neighbor.
+                parents[n] = node
+        # Mark the node as processed.
+        processed.append(node)
+        # Find the next node to process, and loop.
+        node = find_lowest_cost_node(costs, processed)
+
+    print("Cost from the start to each node:")
+    print(costs)
+    print(parents)
+    node_path = generate_shortest_path(parents)
+    return costs, parents, node_path
+    # print(len(parents))
+
+
+dijkstrasAlgorithm(graph, costs, parents)
