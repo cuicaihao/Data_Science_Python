@@ -165,3 +165,6 @@ models/**
 02.TensorFlow/TF2.x/checkpoint
 02.TensorFlow/TF2.x/weights.data-00000-of-00001
 02.TensorFlow/TF2.x/weights.index
+
+03.PyTorch/tensorboard/data/FashionMNIST
+03.PyTorch/tensorboard/runs
