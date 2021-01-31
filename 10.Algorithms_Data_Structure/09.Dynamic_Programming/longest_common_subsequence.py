@@ -26,3 +26,8 @@ M2 = compute(word_b, word_c)
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(M1)
 pp.pprint(M2)
+
+# Test
+word1 = "blue"
+word2 = "clues"
+pp.pprint(compute(word1, word2))
