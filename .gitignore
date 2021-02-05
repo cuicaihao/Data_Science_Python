@@ -177,8 +177,12 @@ models/**
 02.TensorFlow/TF2.x/train
 02.TensorFlow/TF2.x/training_1
 02.TensorFlow/TF2.x/training_2
+02.TensorFlow/TF2.x/aclImdb/
+
 02.TensorFlow/TF2.x/*tar.gz
 
 
 03.PyTorch/tensorboard/data/FashionMNIST
 03.PyTorch/tensorboard/runs
+02.TensorFlow/TF2.x/README.md
+data/mnist/mnist.pkl.gz
