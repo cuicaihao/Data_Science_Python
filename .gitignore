@@ -166,5 +166,19 @@ models/**
 02.TensorFlow/TF2.x/weights.data-00000-of-00001
 02.TensorFlow/TF2.x/weights.index
 
+02.TensorFlow/TF2.x/checkpoints
+02.TensorFlow/TF2.x/ckpt
+02.TensorFlow/TF2.x/dnn_model
+02.TensorFlow/TF2.x/path
+02.TensorFlow/TF2.x/saved_model
+02.TensorFlow/TF2.x/tb
+02.TensorFlow/TF2.x/tensorboard_logs
+02.TensorFlow/TF2.x/test
+02.TensorFlow/TF2.x/train
+02.TensorFlow/TF2.x/training_1
+02.TensorFlow/TF2.x/training_2
+02.TensorFlow/TF2.x/*tar.gz
+
+
 03.PyTorch/tensorboard/data/FashionMNIST
 03.PyTorch/tensorboard/runs
