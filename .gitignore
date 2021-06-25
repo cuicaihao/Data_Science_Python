@@ -1,5 +1,3 @@
-
-
 # original git
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -133,16 +131,15 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
 # Update by User
 .vscode
-tmp/ 
+tmp/
 .ipynb_checkpoints
 html/
 logs/
 tf_logs/
 .DS_Store
-.idea 
+.idea
 .index
 
 # special files
@@ -159,7 +156,7 @@ models/**
 # extra folders TF2.x
 02.TensorFlow/TF2.x/.ipynb_checkpoints
 02.TensorFlow/TF2.x/ckpt
-02.TensorFlow/TF2.x/path 
+02.TensorFlow/TF2.x/path
 02.TensorFlow/TF2.x/saved_model
 02.TensorFlow/TF2.x/tb
 02.TensorFlow/TF2.x/checkpoint
@@ -181,8 +178,18 @@ models/**
 
 02.TensorFlow/TF2.x/*tar.gz
 
-
 03.PyTorch/tensorboard/data/FashionMNIST
 03.PyTorch/tensorboard/runs
 02.TensorFlow/TF2.x/README.md
 data/mnist/mnist.pkl.gz
+
+10.GIS/Data/
+
+*.gz
+03.PyTorch/data
+
+*.html
+*.tif
+*.sqlite
+*.js
+*.webp
