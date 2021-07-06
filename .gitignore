@@ -193,3 +193,9 @@ data/mnist/mnist.pkl.gz
 *.sqlite
 *.js
 *.webp
+*.pt
+*.pth
+01.Python/data/MNIST/raw/*
+11.AutoML/data/MNIST/raw/*
+*.lock
+11.AutoML/dask-worker-space
