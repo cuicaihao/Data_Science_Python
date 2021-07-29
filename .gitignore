@@ -199,3 +199,5 @@ data/mnist/mnist.pkl.gz
 11.AutoML/data/MNIST/raw/*
 *.lock
 11.AutoML/dask-worker-space
+data/
+data/files/
