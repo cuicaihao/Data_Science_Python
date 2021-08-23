@@ -201,3 +201,5 @@ data/mnist/mnist.pkl.gz
 11.AutoML/dask-worker-space
 data/
 data/files/
+10.Geospatial_Data/SnowGIS
+**/*.zip
