@@ -137,7 +137,7 @@ def get_features_and_labels(frame):
     #frame[frame.isnull()] = 0.0
 
     # Convert values to floats
-    arr = np.array(frame, dtype=np.float)
+    arr = np.array(frame, dtype=float)
 
     # Normalize the entire data set
     from sklearn.preprocessing import StandardScaler, MinMaxScaler

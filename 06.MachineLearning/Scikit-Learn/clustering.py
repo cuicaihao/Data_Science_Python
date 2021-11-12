@@ -143,7 +143,7 @@ def get_features(frame):
     #frame[frame.isnull()] = 0.0
 
     # Convert values to floats
-    arr = np.array(frame, dtype=np.float)
+    arr = np.array(frame, dtype=float)
 
     # Impute missing values from the mean of their entire column
     # from sklearn.preprocessing import Imputer
@@ -271,7 +271,7 @@ def plot(Xs, predictions):
             # Plot the decomposed input data and use the predicted
             # cluster index as the value in a color map.
             plt.scatter(X_x, X_y, c=y_pred.astype(
-                np.float), cmap='prism', alpha=0.5)
+                float), cmap='prism', alpha=0.5)
 
             # Set the axis tick formatter to reduce the number of ticks
             ax.xaxis.set_major_locator(MaxNLocator(nbins=4))
