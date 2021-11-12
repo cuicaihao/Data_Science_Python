@@ -203,3 +203,6 @@ data/
 data/files/
 10.Geospatial_Data/SnowGIS
 **/*.zip
+
+!08.PySpark/Iris.csv
+!08.PySpark/BostonHousing.csv
