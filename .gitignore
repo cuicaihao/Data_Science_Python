@@ -206,3 +206,11 @@ data/files/
 
 !08.PySpark/Iris.csv
 !08.PySpark/BostonHousing.csv
+
+
+
+
+08.PySpark/bar.parquet
+08.PySpark/foo.csv
+08.PySpark/spark-warehouse
+08.PySpark/zoo.orc
