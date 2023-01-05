@@ -214,3 +214,7 @@ data/files/
 08.PySpark/foo.csv
 08.PySpark/spark-warehouse
 08.PySpark/zoo.orc
+
+
+# ignore all the model files with .onnx extension
+*.onnx
