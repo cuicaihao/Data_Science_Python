@@ -1,0 +1,6 @@
+[tool.black]
+diff = true
+check = true
+verbose = true
+target-version = ["py39"]
+extend-exclude = "(.*\\/)*(__init__\\.py|template\\/.*|template\\.py)"

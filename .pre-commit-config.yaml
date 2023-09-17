@@ -1,0 +1,63 @@
+repos:
+  # Clean notebooks
+  - repo: https://github.com/srstevenson/nb-clean
+    rev: 2.4.0
+    hooks:
+      - id: nb-clean
+        stages: [commit] # When the hook will be run
+        args:
+          - --remove-empty-cells
+          - --preserve-cell-metadata
+          - collapsed
+          - scrolled
+          - deletable
+          - editable
+          - format
+          - name
+          - tags
+          - jupyter
+          - execution
+          - --
+        exclude: ^(.*\/)*docs\/.*$
+
+    # Various hooks from pre-commit
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-merge-conflict    # Check for files that contain merge conflict strings.
+        args: [--assume-in-merge]   # Allows running the hook when there is no ongoing merge operation
+      - id: detect-private-key      # Checks for the existence of private keys.
+      # - id: no-commit-to-branch     # Protect specific branches from direct checkins
+        # args: [--branch, development, --branch, master]
+      - id: trailing-whitespace     # Trims trailing whitespace.
+        args: [--markdown-linebreak-ext=md]
+        files: \.py$
+
+  # Run flake8
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+      # Run unit test on mlcc library
+      - id: flake8
+        args: ["--append-config=linter/.flake8" ,"--output=_flake8_output"]
+
+  # Run black
+  - repo: https://github.com/psf/black
+    rev: 23.1.0
+    hooks:
+      # Run unit test on mlcc library
+      - id: black
+        args: ["--config", "linter/.black"]
+        exclude: "(.*\\/)*(__init__\\.py|template\\/.*|template\\.py)"
+
+#  # Custom hooks in local repo
+#  - repo: local
+#    hooks:
+#      # Run unit test on mlcc library
+#      - id: unit-test
+#        stages: [push]
+#        name: run-unit-test-on-packages
+#        entry: ai-finance/scripts/hooks/run_unit_tests.sh
+#        language: script
+#        types: [python]
+#        pass_filenames: false

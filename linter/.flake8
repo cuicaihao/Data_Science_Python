@@ -1,0 +1,65 @@
+# Reference: https://www.flake8rules.com/
+[flake8]
+; # Overriding default ignore list: E121,E123,E126,E226,E24,E704,W503,W504
+ignore = E123, E126, E266, E402, W503
+; # Exceptions
+; E123;	Closing bracket does not match indentation of opening bracket's line (Conflict with black)
+; E126:	Continuation line over-indented for hanging indent (Conflict with pep8 https://peps.python.org/pep-0008/#indentation)
+; E266: Too many leading '#' for block comment
+; E402:	Module level import not at top of file (component needs to define import inside function)
+; W503:	Line break occurred before a binary operator (conflict with black)
+
+;# Removed exceptions (default)
+; E121: Continuation line under-indented for hanging indent (we want consistent indentation)
+; E226:	Missing whitespace around arithmetic operator (too crowded, against pep8 recommendation https://peps.python.org/pep-0008/#other-recommendations)
+; E24: Multiple tab/spaces after ','
+; E704:	Multiple statements on one line (def) - bad for readability
+; W504:	Line break occurred after a binary operator (following black)
+
+;# Removed exceptions (previous list from another project)
+; E203: Whitespace before ':' (https://peps.python.org/pep-0008/#whitespace-in-expressions-and-statements)
+; E501: Line too long (82 > 79 characters) Instead append `# noqa: E501` at the end of the line
+; E712:	Comparison to true should be 'if cond is true:' or 'if cond:'. 
+;       Good article on the difference: https://switowski.com/blog/checking-for-true-or-false
+; F401: Module imported but unused (Unused modules should be removed)
+; F403: 'from module import *' used; unable to detect undefined names (Also not effective and making code slow)
+
+select = E,F,W,C90 # flake8 defaults
+extend-select = D,DC,N # Additional error codes from plugins
+; D: used by flake8-docstrings (scan docstring against pydocstyle)
+; DC: used by flake8-docstrings-complete (check if docstring is complete)
+; N: pep8-naming (checks for naming convention)
+extend-ignore = DCO031
+; DCO031: function/ method that does not return a value should not have the returns section in the docstring.
+
+per-file-ignores =
+    **/__init__.py: D104, F401
+    **/constants.py: D100
+    **/pipelines/*: D100, D103, DCO010
+    **/components/*/component.py: D100
+    **/components/*/exceptions.py: D100
+    scripts/hooks/examples/*.py: D100
+
+extend-exclude =
+    !**/*.py
+    **/template/*
+    **/tests/*
+    **/cloud_run_invoker/main.py
+    **/template.py
+    **/.*
+    conftest.py
+
+; Black cap line length to 88 but won't complain if it doesn't exceed limit by more than 10%
+max-line-length = 97
+
+
+; # flake8-docstrings
+docstring-convention = google
+ignore-self-only-init = true
+
+; # flake8-spellcheck
+dictionaries=en_US,python,technical,pandas
+whitelist=linter/spell_check_whitelist.txt
+
+; # mccabe
+max-complexity = 10
