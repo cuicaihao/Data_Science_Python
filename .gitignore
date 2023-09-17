@@ -148,6 +148,13 @@ tf_logs/
 *.pdf
 models/**
 
+
+# unsorted
+00.Unsorted/*
+
+# extra folders pkgs
+
+
 05.Text_NLP/training_checkpoints/
 06.MachineLearning/catboost_info/
 06.MachineLearning/model_depth_1
