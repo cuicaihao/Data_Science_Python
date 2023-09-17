@@ -6,7 +6,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 fig = matplotlib.figure.Figure(figsize=(5, 4), dpi=100)
-t = np.arange(0, 3, .01)
+t = np.arange(0, 3, 0.01)
 fig.add_subplot(111).plot(t, 2 * np.sin(2 * np.pi * t))
 
 

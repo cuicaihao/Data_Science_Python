@@ -148,9 +148,11 @@ tf_logs/
 *.pdf
 models/**
 
+_flake8_output
 
 # unsorted
 00.Unsorted/*
+
 
 # extra folders pkgs
 

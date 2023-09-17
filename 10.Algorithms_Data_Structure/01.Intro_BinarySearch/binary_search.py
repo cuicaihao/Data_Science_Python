@@ -1,5 +1,4 @@
-class BinarySearch():
-
+class BinarySearch:
     def search_iterative(self, list, item):
         # low and high keep track of which part of the list you'll search in.
         low = 0
@@ -26,7 +25,6 @@ class BinarySearch():
     def search_recursive(self, list, low, high, item):
         # Check base case
         if high >= low:
-
             mid = (high + low) // 2
             guess = list[mid]
 

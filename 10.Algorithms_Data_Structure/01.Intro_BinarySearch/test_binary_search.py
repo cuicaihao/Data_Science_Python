@@ -18,7 +18,6 @@ list_with_1000_items = data["list_with_1000_items"]
 
 # Test cases to test Binary Search algorithm
 class TestBinarySearch(unittest.TestCase):
-
     def setUp(self):
         print(".......... %s" % self._testMethodName)
 
@@ -60,8 +59,7 @@ class TestBinarySearch(unittest.TestCase):
 
         # Time required to search
         start_time = time.time()
-        binary_search_index = bs.search_iterative(
-            list_with_1000_items, item)  # => None
+        binary_search_index = bs.search_iterative(list_with_1000_items, item)  # => None
         bs_time = time.time() - start_time
 
         # list.index(x) return the index in the list of the first item whose value is x.
@@ -84,8 +82,7 @@ class TestBinarySearch(unittest.TestCase):
 
         # Binary search - time required to search
         start_time = time.time()
-        binary_search_index = bs.search_iterative(
-            list_with_1000_items, item)  # => None
+        binary_search_index = bs.search_iterative(list_with_1000_items, item)  # => None
         bs_time = time.time() - start_time
 
         # Linear search - time required to search
@@ -105,5 +102,5 @@ class TestBinarySearch(unittest.TestCase):
         # print("--- Binary Search %f seconds ---" % (bs_time))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

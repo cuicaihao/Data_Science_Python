@@ -18,12 +18,10 @@ def main():
     sg.theme("LightGreen")
 
     video_column = [
-
         [sg.Image(filename="", key="-IMAGE-")],
     ]
     control_column = [
-        [sg.Text("OpenCV Demo: Control Panel", size=(
-            60, 1), justification="center")],
+        [sg.Text("OpenCV Demo: Control Panel", size=(60, 1), justification="center")],
         [sg.Radio("None", "Radio", True, size=(10, 1))],
         [
             sg.Radio("threshold", "Radio", size=(10, 1), key="-THRESH-"),
@@ -91,17 +89,16 @@ def main():
         [sg.Button("Exit", size=(10, 1))],
     ]
     # Define the window layout
-    layout = [
-
-        [sg.Column(video_column),
-         sg.VSeperator(),
-         sg.Column(control_column)]
-
-    ]
+    layout = [[sg.Column(video_column), sg.VSeperator(), sg.Column(control_column)]]
 
     # Create the window and show it without the plot
-    window = sg.Window("OpenCV Integration", layout,
-                       size=(800, 420), location=(800, 400), finalize=False)
+    window = sg.Window(
+        "OpenCV Integration",
+        layout,
+        size=(800, 420),
+        location=(800, 400),
+        finalize=False,
+    )
 
     cap = cv2.VideoCapture(0)
     width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)

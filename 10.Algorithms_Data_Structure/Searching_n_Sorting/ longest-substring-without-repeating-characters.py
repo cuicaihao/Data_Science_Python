@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- encoding: utf-8 -*-
-'''
+"""
 Created on   :2020/11/27 17:25:25
 @author      :Caihao (Chris) Cui
 @file        :Untitled-1
 @content     :xxx xxx xxx
 @version     :0.1
 @License :   (C)Copyright 2020 MIT
-'''
+"""
 
 # here put the import lib
 

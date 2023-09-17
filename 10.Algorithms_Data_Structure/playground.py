@@ -36,11 +36,12 @@ def factorial(n):
     """
 
     import math
+
     if not n >= 0:
         raise ValueError("n must be >= 0")
     if math.floor(n) != n:
         raise ValueError("n must be exact integer")
-    if n+1 == n:  # catch a value like 1e300
+    if n + 1 == n:  # catch a value like 1e300
         raise OverflowError("n too large")
     result = 1
     factor = 2
@@ -56,4 +57,5 @@ def test_fraction():
 
 if __name__ == "__main__":
     import doctest
+
     doctest.testmod()

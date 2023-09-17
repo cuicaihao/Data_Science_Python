@@ -1,4 +1,3 @@
-
 from pyspark.sql.types import *
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler, StringIndexer
@@ -6,6 +5,7 @@ from pyspark.ml.classification import NaiveBayes
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 
 import findspark
+
 findspark.init()
 spark = SparkSession.builder.master("local[*]").getOrCreate()
 
@@ -13,24 +13,28 @@ spark = SparkSession.builder.master("local[*]").getOrCreate()
 # Step 1: Read data
 
 # Id,SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm,Species
-struct = StructType([
-    StructField('Id', IntegerType(), True),
-    StructField('SepalLengthCm', DoubleType(), True),
-    StructField('SepalWidthCm', DoubleType(), True),
-    StructField('PetalLengthCm', DoubleType(), True),
-    StructField('PetalWidthCm', DoubleType(), True),
-    StructField('Species', StringType(), True)
-])
+struct = StructType(
+    [
+        StructField("Id", IntegerType(), True),
+        StructField("SepalLengthCm", DoubleType(), True),
+        StructField("SepalWidthCm", DoubleType(), True),
+        StructField("PetalLengthCm", DoubleType(), True),
+        StructField("PetalWidthCm", DoubleType(), True),
+        StructField("Species", StringType(), True),
+    ]
+)
 
 
-df_iris = spark.read.csv('iris.csv', header=True, schema=struct)
+df_iris = spark.read.csv("iris.csv", header=True, schema=struct)
 df_iris.printSchema()
 df_iris.show(5)
 
 
 # Step 2: I/O Sample Pairing
-vecAssembler = VectorAssembler(inputCols=[
-    "SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"], outputCol="features")
+vecAssembler = VectorAssembler(
+    inputCols=["SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"],
+    outputCol="features",
+)
 df_features = vecAssembler.transform(df_iris)
 
 strIndexer = StringIndexer(inputCol="Species", outputCol="label")
@@ -40,7 +44,7 @@ df_features_label.show(5)
 
 # Step 3: Train/Test Split
 
-df_train, df_test = df_features_label.randomSplit([.8, .2])
+df_train, df_test = df_features_label.randomSplit([0.8, 0.2])
 
 print(f"{df_train.count()=}, {df_test.count()=}")
 

@@ -11,11 +11,7 @@ file_list_column = [
         sg.In(size=(25, 1), enable_events=True, key="-FOLDER-"),
         sg.FolderBrowse(),
     ],
-    [
-        sg.Listbox(
-            values=[], enable_events=True, size=(40, 20), key="-FILE LIST-"
-        )
-    ],
+    [sg.Listbox(values=[], enable_events=True, size=(40, 20), key="-FILE LIST-")],
 ]
 
 # For now will only show the name of the file that was chosen
@@ -59,9 +55,7 @@ while True:
         window["-FILE LIST-"].update(fnames)
     elif event == "-FILE LIST-":  # A file was chosen from the listbox
         try:
-            filename = os.path.join(
-                values["-FOLDER-"], values["-FILE LIST-"][0]
-            )
+            filename = os.path.join(values["-FOLDER-"], values["-FILE LIST-"][0])
             window["-TOUT-"].update(filename)
             window["-IMAGE-"].update(filename=filename)
 

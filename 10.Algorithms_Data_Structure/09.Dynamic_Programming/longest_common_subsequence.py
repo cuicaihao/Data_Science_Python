@@ -1,5 +1,5 @@
-
 import pprint
+
 word_a = "Fish"
 word_b = "Hist"
 word_c = "Vista"
@@ -13,10 +13,10 @@ def compute(word_a, word_b):
         for j in range(len(word_b)):
             if word_a[i] == word_b[j]:
                 # The letters match.
-                Matrix[i][j] = Matrix[i-1][j-1] + 1
+                Matrix[i][j] = Matrix[i - 1][j - 1] + 1
             else:
                 # The letters don't match.
-                Matrix[i][j] = max(Matrix[i-1][j], Matrix[i][j-1])
+                Matrix[i][j] = max(Matrix[i - 1][j], Matrix[i][j - 1])
     return Matrix
 
 

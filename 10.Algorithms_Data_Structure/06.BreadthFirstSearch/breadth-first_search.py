@@ -2,7 +2,7 @@ from collections import deque
 
 
 def person_is_seller(name):
-    return name[-1] == 'm'
+    return name[-1] == "m"
 
 
 graph = {}

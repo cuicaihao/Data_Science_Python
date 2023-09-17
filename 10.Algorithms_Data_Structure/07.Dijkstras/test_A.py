@@ -48,7 +48,7 @@ def test_case_A():
 
     # Run the dijkstras algorithm
     costs, parents, node_path = dijkstrasAlgorithm(graph, costs, parents)
-    assert node_path == ['start', 'A', 'D', 'fin']
+    assert node_path == ["start", "A", "D", "fin"]
 
 
 if __name__ == "__main__":

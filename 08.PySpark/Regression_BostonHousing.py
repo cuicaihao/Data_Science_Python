@@ -3,17 +3,34 @@ from pyspark.ml.regression import LinearRegression
 from pyspark.ml.feature import VectorAssembler
 from pyspark.sql import SparkSession
 import findspark
+
 findspark.init()
 spark = SparkSession.builder.master("local[*]").getOrCreate()
 
 # Step 1: Read the data
-dataset = spark.read.csv('BostonHousing.csv', inferSchema=True, header=True)
+dataset = spark.read.csv("BostonHousing.csv", inferSchema=True, header=True)
 dataset.printSchema()
 
 # Step 2: Set I/O sample pair
 # Input all the features in one vector column
-assembler = VectorAssembler(inputCols=['crim', 'zn', 'indus', 'chas', 'nox', 'rm',
-                            'age', 'dis', 'rad', 'tax', 'ptratio', 'b', 'lstat'], outputCol='Attributes')
+assembler = VectorAssembler(
+    inputCols=[
+        "crim",
+        "zn",
+        "indus",
+        "chas",
+        "nox",
+        "rm",
+        "age",
+        "dis",
+        "rad",
+        "tax",
+        "ptratio",
+        "b",
+        "lstat",
+    ],
+    outputCol="Attributes",
+)
 
 output = assembler.transform(dataset)
 
@@ -28,7 +45,7 @@ train_data, test_data = finalized_data.randomSplit([0.8, 0.2])
 
 
 # Step 4: Model Development
-regressor = LinearRegression(featuresCol='Attributes', labelCol='medv')
+regressor = LinearRegression(featuresCol="Attributes", labelCol="medv")
 
 # Learn to fit the model from training set
 regressor = regressor.fit(train_data)
@@ -55,7 +72,8 @@ print("The Intercept of the model is : %f" % intr)
 
 # Compute Metrics
 eval = RegressionEvaluator(
-    labelCol="medv", predictionCol="prediction", metricName="rmse")
+    labelCol="medv", predictionCol="prediction", metricName="rmse"
+)
 
 # Root Mean Square Error
 rmse = eval.evaluate(pred.predictions)
