@@ -192,6 +192,9 @@ _flake8_output
 02.TensorFlow/TF2.x/README.md
 data/mnist/mnist.pkl.gz
 
+
+07.AutoML/AutogluonModels
+
 10.GIS/Data/
 
 *.gz
