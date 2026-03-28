@@ -1,5 +1,5 @@
 def quicksort(array):
-    if type(array) is not list:
+    if not isinstance(array, list):
         print("input data format is wrong")
         return None
     elif len(array) < 2:

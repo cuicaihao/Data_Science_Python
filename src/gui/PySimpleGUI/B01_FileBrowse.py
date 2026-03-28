@@ -14,7 +14,7 @@ while True:
     if event in ("Exit", "Quit", None):
         break
     source_file = values["-sourcefile-"]
-    if event is "OK":
+    if event == "OK":
         sg.popup("Source file is:", source_file + str(type(source_file)))
 
 

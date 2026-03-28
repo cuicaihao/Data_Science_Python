@@ -1,5 +1,4 @@
 from typing import Optional
-from enum import Enum
 from fastapi import FastAPI
 
 app = FastAPI()

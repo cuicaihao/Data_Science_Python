@@ -99,7 +99,7 @@ def highlight(x, y):
                         "y0": selectedDatas[0]["range"]["y"][0],
                         "y1": selectedDatas[0]["range"]["y"][1],
                     },
-                    **shape
+                    **shape,
                 )
             ]
         else:
@@ -112,7 +112,7 @@ def highlight(x, y):
                         "y0": np.min(df[y]),
                         "y1": np.max(df[y]),
                     },
-                    **shape
+                    **shape,
                 )
             ]
 

@@ -4,7 +4,7 @@ repos:
     rev: 2.4.0
     hooks:
       - id: nb-clean
-        stages: [commit] # When the hook will be run
+        stages: [pre-commit]
         args:
           - --remove-empty-cells
           - --preserve-cell-metadata
@@ -20,44 +20,27 @@ repos:
           - --
         exclude: ^(.*\/)*docs\/.*$
 
-    # Various hooks from pre-commit
+  # Various hooks from pre-commit
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
-      - id: check-merge-conflict    # Check for files that contain merge conflict strings.
-        args: [--assume-in-merge]   # Allows running the hook when there is no ongoing merge operation
-      - id: detect-private-key      # Checks for the existence of private keys.
-      # - id: no-commit-to-branch     # Protect specific branches from direct checkins
-        # args: [--branch, development, --branch, master]
-      - id: trailing-whitespace     # Trims trailing whitespace.
+      - id: check-merge-conflict
+        args: [--assume-in-merge]
+      - id: detect-private-key
+      - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
         files: \.py$
 
-  # Run flake8
-  - repo: https://github.com/PyCQA/flake8
-    rev: 6.0.0
+  # Ruff: The fast Python linter and formatter (Replaces flake8 and black)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.3.4
     hooks:
-      # Run unit test on mlcc library
-      - id: flake8
-        args: ["--append-config=scripts/.flake8" ,"--output=_flake8_output"]
-
-  # Run black
-  - repo: https://github.com/psf/black
-    rev: 23.1.0
-    hooks:
-      # Run unit test on mlcc library
-      - id: black
-        args: ["--config", "scripts/.black"]
-        exclude: "(.*\\/)*(__init__\\.py|template\\/.*|template\\.py)"
-
-#  # Custom hooks in local repo
-#  - repo: local
-#    hooks:
-#      # Run unit test on mlcc library
-#      - id: unit-test
-#        stages: [push]
-#        name: run-unit-test-on-packages
-#        entry: ai-finance/scripts/hooks/run_unit_tests.sh
-#        language: script
-#        types: [python]
-#        pass_filenames: false
+      # Linter
+      - id: ruff
+        args: [ --fix, --exit-non-zero-on-fix ]
+        types_or: [ python, pyi ]
+        exclude: ^notebooks/
+      # Formatter
+      - id: ruff-format
+        types_or: [ python, pyi ]
+        exclude: ^notebooks/

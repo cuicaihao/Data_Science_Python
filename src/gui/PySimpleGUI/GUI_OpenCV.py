@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
 import cv2
-import numpy as np
 
 
 def resize_frame(img, scale_percent):

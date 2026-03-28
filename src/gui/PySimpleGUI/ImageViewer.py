@@ -43,7 +43,7 @@ while True:
         try:
             # Get list of files in folder
             file_list = os.listdir(folder)
-        except:
+        except Exception:
             file_list = []
 
         fnames = [
@@ -59,7 +59,7 @@ while True:
             window["-TOUT-"].update(filename)
             window["-IMAGE-"].update(filename=filename)
 
-        except:
+        except Exception:
             pass
 
 window.close()

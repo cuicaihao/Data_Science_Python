@@ -1,9 +1,8 @@
 #!/Users/caihaocui/opt/miniconda3/bin/python
 # %% load the package
-from os import name
 import tensorflow as tf
 from tensorflow.keras import layers
-from tensorflow.python.keras.engine.sequential import relax_input_shape
+import matplotlib.pyplot as plt
 
 print(tf.__version__)
 

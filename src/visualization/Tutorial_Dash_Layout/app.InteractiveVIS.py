@@ -45,29 +45,34 @@ app.layout = html.Div(
             children=[
                 html.Div(
                     [
-                        dcc.Markdown(d("""
+                        dcc.Markdown(
+                            d("""
                 **Hover Data**
 
                 Mouse over values in the graph.
-            """)),
+            """)
+                        ),
                         html.Pre(id="hover-data", style=styles["pre"]),
                     ],
                     className="three columns",
                 ),
                 html.Div(
                     [
-                        dcc.Markdown(d("""
+                        dcc.Markdown(
+                            d("""
                 **Click Data**
 
                 Click on points in the graph.
-            """)),
+            """)
+                        ),
                         html.Pre(id="click-data", style=styles["pre"]),
                     ],
                     className="three columns",
                 ),
                 html.Div(
                     [
-                        dcc.Markdown(d("""
+                        dcc.Markdown(
+                            d("""
                 **Selection Data**
 
                 Choose the lasso or rectangle tool in the graph's menu
@@ -76,21 +81,24 @@ app.layout = html.Div(
                 Note that if `layout.clickmode = 'event+select'`, selection data also
                 accumulates (or un-accumulates) selected data if you hold down the shift
                 button while clicking.
-            """)),
+            """)
+                        ),
                         html.Pre(id="selected-data", style=styles["pre"]),
                     ],
                     className="three columns",
                 ),
                 html.Div(
                     [
-                        dcc.Markdown(d("""
+                        dcc.Markdown(
+                            d("""
                 **Zoom and Relayout Data**
 
                 Click and drag on the graph to zoom or click on the zoom
                 buttons in the graph's menu bar.
                 Clicking on legend items will also fire
                 this event.
-            """)),
+            """)
+                        ),
                         html.Pre(id="relayout-data", style=styles["pre"]),
                     ],
                     className="three columns",
