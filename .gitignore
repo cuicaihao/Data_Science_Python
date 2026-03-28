@@ -1,10 +1,8 @@
-# original git
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 *.icloud
-*.png
 
 # C extensions
 *.so
@@ -31,8 +29,6 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -87,23 +83,6 @@ ipython_config.py
 # pyenv
 .python-version
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
 # Environments
 .env
 .venv
@@ -134,7 +113,6 @@ dmypy.json
 # Update by User
 .vscode
 tmp/
-.ipynb_checkpoints
 html/
 logs/
 tf_logs/
@@ -144,89 +122,44 @@ tf_logs/
 
 # special files
 *.h5
-*.csv
 *.pdf
 models/**
-
 _flake8_output
 
-# unsorted
-00.Unsorted/*
+# Large artifacts and datasets
+notebooks/06_tabular_ml/*.json
+notebooks/04_nlp/*.tsv
+notebooks/03_deep_learning/pytorch/data/
+notebooks/06_tabular_ml/automl/data/
+data/
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.weights.data*
+*.weights.index
 
-
-# extra folders pkgs
-
-
-05.Text_NLP/training_checkpoints/
-06.MachineLearning/catboost_info/
-06.MachineLearning/model_depth_1
-06.MachineLearning/model_depth_5
-
-# extra folders TF2.x
-02.TensorFlow/TF2.x/.ipynb_checkpoints
-02.TensorFlow/TF2.x/ckpt
-02.TensorFlow/TF2.x/path
-02.TensorFlow/TF2.x/saved_model
-02.TensorFlow/TF2.x/tb
-02.TensorFlow/TF2.x/checkpoint
-02.TensorFlow/TF2.x/weights.data-00000-of-00001
-02.TensorFlow/TF2.x/weights.index
-
-02.TensorFlow/TF2.x/checkpoints
-02.TensorFlow/TF2.x/ckpt
-02.TensorFlow/TF2.x/dnn_model
-02.TensorFlow/TF2.x/path
-02.TensorFlow/TF2.x/saved_model
-02.TensorFlow/TF2.x/tb
-02.TensorFlow/TF2.x/tensorboard_logs
-02.TensorFlow/TF2.x/test
-02.TensorFlow/TF2.x/train
-02.TensorFlow/TF2.x/training_1
-02.TensorFlow/TF2.x/training_2
-02.TensorFlow/TF2.x/aclImdb/
-
-02.TensorFlow/TF2.x/*tar.gz
-
-03.PyTorch/tensorboard/data/FashionMNIST
-03.PyTorch/tensorboard/runs
-02.TensorFlow/TF2.x/README.md
-data/mnist/mnist.pkl.gz
-
-
-07.AutoML/AutogluonModels
-
-10.GIS/Data/
-
-*.gz
-03.PyTorch/data
-
+# Generated Visualization/Web artifacts
 *.html
 *.tif
 *.sqlite
-*.js
 *.webp
-*.pt
-*.pth
-01.Python/data/MNIST/raw/*
-11.AutoML/data/MNIST/raw/*
 *.lock
+**/*autogluon*/
 11.AutoML/dask-worker-space
-data/
-data/files/
-10.Geospatial_Data/SnowGIS
-**/*.zip
+src/visualization/*.html
 
-!08.PySpark/Iris.csv
-!08.PySpark/BostonHousing.csv
+# Folder specific cleanups
+00.Unsorted/
+notebooks/03_deep_learning/tensorflow/TF2.x/ckpt/
+notebooks/03_deep_learning/tensorflow/TF2.x/saved_model/
+notebooks/03_deep_learning/tensorflow/TF2.x/tensorboard_logs/
+notebooks/03_deep_learning/pytorch/tensorboard/runs/
+notebooks/07_big_data/spark-warehouse/
 
-
-
-
-08.PySpark/bar.parquet
-08.PySpark/foo.csv
-08.PySpark/spark-warehouse
-08.PySpark/zoo.orc
-
-
-# ignore all the model files with .onnx extension
-*.onnx
+# Exception for specific project assets
+!notebooks/07_big_data/Iris.csv
+!notebooks/07_big_data/BostonHousing.csv
+!src/web/Tornado/chat/static/chat.js
+!src/web/Tornado/chat/templates/*.html
+!assets/

@@ -39,7 +39,7 @@ repos:
     hooks:
       # Run unit test on mlcc library
       - id: flake8
-        args: ["--append-config=linter/.flake8" ,"--output=_flake8_output"]
+        args: ["--append-config=scripts/.flake8" ,"--output=_flake8_output"]
 
   # Run black
   - repo: https://github.com/psf/black
@@ -47,7 +47,7 @@ repos:
     hooks:
       # Run unit test on mlcc library
       - id: black
-        args: ["--config", "linter/.black"]
+        args: ["--config", "scripts/.black"]
         exclude: "(.*\\/)*(__init__\\.py|template\\/.*|template\\.py)"
 
 #  # Custom hooks in local repo
