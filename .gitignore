@@ -1,70 +1,69 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*.icloud
 *.py[cod]
 *$py.class
-*.icloud
 
 # C extensions
 *.so
 
 # Distribution / packaging
 .Python
+.eggs/
+*.egg
+*.egg-info/
 build/
 develop-eggs/
 dist/
 downloads/
 eggs/
-.eggs/
 lib/
 lib64/
+MANIFEST
 parts/
+pip-wheel-metadata/
 sdist/
+share/python-wheels/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
 
 # PyInstaller
 *.manifest
 *.spec
 
 # Installer logs
-pip-log.txt
 pip-delete-this-directory.txt
+pip-log.txt
 
 # Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
+.cache
 .coverage
 .coverage.*
-.cache
-nosetests.xml
-coverage.xml
+.hypothesis/
+.nox/
+.pytest_cache/
+.tox/
 *.cover
 *.py,cover
-.hypothesis/
-.pytest_cache/
+coverage.xml
+htmlcov/
+nosetests.xml
 
 # Translations
 *.mo
 *.pot
 
-# Django stuff:
+# Django stuff
 *.log
-local_settings.py
 db.sqlite3
 db.sqlite3-journal
+local_settings.py
 
-# Flask stuff:
-instance/
+# Flask stuff
 .webassets-cache
+instance/
 
-# Scrapy stuff:
+# Scrapy stuff
 .scrapy
 
 # Sphinx documentation
@@ -77,8 +76,8 @@ target/
 .ipynb_checkpoints
 
 # IPython
-profile_default/
 ipython_config.py
+profile_default/
 
 # pyenv
 .python-version
@@ -86,15 +85,15 @@ ipython_config.py
 # Environments
 .env
 .venv
-env/
-venv/
 ENV/
+env/
 env.bak/
+venv/
 venv.bak/
 
 # Spyder project settings
-.spyderproject
 .spyproject
+.spyderproject
 
 # Rope project settings
 .ropeproject
@@ -103,63 +102,67 @@ venv.bak/
 /site
 
 # mypy
-.mypy_cache/
 .dmypy.json
+.mypy_cache/
 dmypy.json
 
 # Pyre type checker
 .pyre/
 
-# Update by User
-.vscode
-tmp/
-html/
-logs/
-tf_logs/
+# Editor/OS settings
 .DS_Store
 .idea
 .index
+.vscode
 
-# special files
-*.h5
-*.pdf
-models/**
+# Temporary files and folders
 _flake8_output
+temp/
+temp_*
+tmp/
+tmp_*
 
 # Large artifacts and datasets
-notebooks/06_tabular_ml/*.json
-notebooks/04_nlp/*.tsv
-notebooks/03_deep_learning/pytorch/data/
-notebooks/06_tabular_ml/automl/data/
-data/
+*.ckpt
+*.csv
+*.h5
 *.onnx
+*.pdf
+*.pickle
+*.pkl
 *.pt
 *.pth
-*.ckpt
 *.weights.data*
 *.weights.index
+data/
+models/
+notebooks/03_deep_learning/pytorch/data/
+notebooks/04_nlp/*.tsv
+notebooks/06_tabular_ml/*.json
+notebooks/06_tabular_ml/automl/data/
 
 # Generated Visualization/Web artifacts
 *.html
-*.tif
-*.sqlite
-*.webp
+*.js
 *.lock
+*.sqlite
+*.tif
+*.webp
 **/*autogluon*/
-11.AutoML/dask-worker-space
+**/catboost_info/
+notebooks/06_tabular_ml/automl/dask-worker-space/
 src/visualization/*.html
 
-# Folder specific cleanups
-00.Unsorted/
-notebooks/03_deep_learning/tensorflow/TF2.x/ckpt/
-notebooks/03_deep_learning/tensorflow/TF2.x/saved_model/
-notebooks/03_deep_learning/tensorflow/TF2.x/tensorboard_logs/
+# Project Specific Cleanups
 notebooks/03_deep_learning/pytorch/tensorboard/runs/
+notebooks/03_deep_learning/tensorflow/ckpt/
+notebooks/03_deep_learning/tensorflow/saved_model/
+notebooks/03_deep_learning/tensorflow/tensorboard_logs/
 notebooks/07_big_data/spark-warehouse/
 
 # Exception for specific project assets
-!notebooks/07_big_data/Iris.csv
+!assets/
 !notebooks/07_big_data/BostonHousing.csv
+!notebooks/07_big_data/Iris.csv
 !src/web/Tornado/chat/static/chat.js
 !src/web/Tornado/chat/templates/*.html
-!assets/
